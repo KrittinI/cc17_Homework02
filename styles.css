@@ -1,0 +1,374 @@
+/* Global */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+body {
+    background-color: #aaa;
+}
+
+/* Header */
+header {
+    height: 80px;
+    padding: 20px 40px;
+    border-bottom: 3px solid #aaa;
+    box-shadow: 2px 2px 4px #eee;
+}
+
+/* Header Left */
+header .left {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-width: 120px;
+    flex-basis: 240px;
+    gap: 8px;
+}
+
+.left .brand span {
+    font-weight: normal;
+}
+
+/* Header Center */
+header .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    min-width: 120px;
+    flex-basis: 360px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Header Right */
+header .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    flex-basis: 320px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-inline: 8px;
+}
+
+
+header .menu,
+header .login,
+header .signup {
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+header .cart,
+header .search {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+header .menu:hover,
+header .login:hover,
+header .signup:hover,
+header .search:hover,
+header .cart:hover {
+    background-color: yellowgreen;
+    color: #555;
+}
+
+
+.cart {
+    position: relative;
+}
+
+.right .cart::after {
+    width: 20px;
+    height: 20px;
+    content: "1";
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75em;
+    color: #ccc;
+}
+
+/* Main */
+.main {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+
+.main .topic {
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.main .cart,
+.main .order {
+    width: 50%;
+    min-width: 240px;
+    border-radius: 16px;
+    margin: 10px auto;
+}
+
+/* Cart */
+.main .cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart .item {
+    height: 200px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: #bbb;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    display: flex;
+    padding: 8px;
+    box-shadow: 4px 4px 8px #999;
+}
+
+/* Icon */
+.icon {
+    width: 10%;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid greenyellow;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round-icon:hover {
+    border: 1px solid #aaa;
+    background-color: greenyellow;
+}
+
+.round-icon:hover svg {
+    fill: #aaa;
+}
+
+/* Course */
+.course {
+    width: 40%;
+    min-width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-file {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    background-color: blue;
+    border-radius: 16px;
+    padding: 8px;
+    color: #eee;
+}
+
+.square-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #bbb;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+}
+
+/* Course Detail */
+.course-detail {
+    width: 40%;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    padding: 8px;
+}
+
+/* Level */
+.level-circle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.level-circle .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: greenyellow;
+}
+
+.level-circle select {
+    border: none;
+    color: #888;
+    background-color: #bbb;
+}
+
+/* Order */
+.main .order {
+    height: 80%;
+    border: 2px solid #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.order .order-info {
+    height: 50%;
+    width: 100%;
+    border-bottom: 1px solid #888;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 16px;
+}
+
+.order-center {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.promotion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.promotion .ticket {
+    height: 40px;
+    width: 40px;
+    /* color: greenyellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion .promo-code {
+    flex-grow: 1;
+}
+
+
+.promotion .promo-code form {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.promotion .promo-code input {
+    height: 40px;
+}
+
+input.promo-text {
+    border: 1px solid #888;
+    background-color: #aaa;
+    padding: 8px;
+    color: #888;
+    flex-grow: 1;
+    border-radius: 8px;
+}
+
+.promotion input.promo-text:focus {
+    background-color: #aaa;
+    color: #555;
+    outline: 1px solid greenyellow;
+}
+
+input.promo-apply {
+    width: 40%;
+    color: greenyellow;
+    background-color: #aaa;
+    border: 1px solid greenyellow;
+    border-radius: 8px;
+}
+
+input.promo-apply:hover {
+    color: #aaa;
+    background-color: greenyellow;
+    border: 1px solid #aaa;
+}
+
+/* Payment */
+.payment {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 8px;
+}
+
+.checkout {
+    width: 100%;
+}
+
+.payment h4 {
+    font-size: 2em;
+    font-weight: bold;
+    color: greenyellow;
+}
+
+.checkout input {
+    width: 100%;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+    background-color: greenyellow;
+    border-radius: 8px;
+}
+
+.checkout input:hover {
+    background-color: rgb(123, 189, 25);
+}
